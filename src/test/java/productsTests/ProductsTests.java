@@ -17,7 +17,7 @@ public class ProductsTests extends BaseTest{
         loginPage.enterUsernameAndPasswordAndClick("standard_user", "secret_sauce");
         productPage.clickAddToCart();
         productPage.clickMyCart();
-        driver.getPageSource().contains("Sauce Labs Backpack");
+        Assertions.assertTrue(driver.getPageSource().contains("Sauce Labs Backpack"));
     }
 
 
